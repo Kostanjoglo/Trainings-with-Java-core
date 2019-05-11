@@ -6,8 +6,6 @@ public class HelloThread extends Thread {
         System.out.println("Hello from a thread!");
     }
 
-    public static void main(String args[]) {
-        (new HelloThread()).start();
-    }
+
 
 }
