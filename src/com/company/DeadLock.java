@@ -5,8 +5,8 @@ public class DeadLock {
         private final String name;
         Friend(String name) {
             this.name = name;
-        }
-
+        }       
+            123trying
             return this.name;
         }
         synchronized void bow(Friend bower) {
