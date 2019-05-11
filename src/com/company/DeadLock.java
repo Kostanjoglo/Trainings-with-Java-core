@@ -6,7 +6,7 @@ public class DeadLock {
         Friend(String name) {
             this.name = name;
         }
-        String getName() {
+
             return this.name;
         }
         synchronized void bow(Friend bower) {
