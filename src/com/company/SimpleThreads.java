@@ -30,6 +30,7 @@ public class SimpleThreads {
                 }
             } catch (InterruptedException e) {
                 threadMessage("I wasn't done!");
+                Thread.currentThread().interrupt();
             }
         }
     }
