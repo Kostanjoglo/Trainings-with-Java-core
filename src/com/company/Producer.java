@@ -23,6 +23,8 @@ public class Producer implements Runnable {
             try {
                 Thread.sleep(random.nextInt(5000));
             } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                break;
             }
         }
         drop.put("DONE");

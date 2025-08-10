@@ -17,7 +17,10 @@ public class Consumer implements Runnable {
             System.out.format("MESSAGE RECEIVED: %s%n", message);
             try {
                 Thread.sleep(random.nextInt(5000));
-            } catch (InterruptedException e) {}
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                break;
+            }
         }
     }
 }

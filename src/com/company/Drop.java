@@ -16,7 +16,9 @@ public class Drop {
         while (empty) {
             try {
                 wait();
-            } catch (InterruptedException e) {}
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
         }
         // Toggle status.
         empty = true;
@@ -32,7 +34,9 @@ public class Drop {
         while (!empty) {
             try {
                 wait();
-            } catch (InterruptedException e) {}
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
         }
         // Toggle status.
         empty = false;
